@@ -5,3 +5,13 @@ import os
 
 app = Flask(__name__)
 GUESTBOOK_FILE = "guestbook.json"
+
+def load_entries():
+    if not os.path.exists(GUESTBOOK_FILE):
+        return []
+    with open(GUESTBOOK_FILE, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+def save_entries(entries):
+    with open(GUESTBOOK_FILE, "w", encoding="utf-8") as f:
+        json.dump(entries, f, ensure_ascii=False, indent=2)
