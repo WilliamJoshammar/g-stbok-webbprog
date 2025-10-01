@@ -29,3 +29,24 @@ h1, h2 {
 	font-weight: bold;
 	color: #444;
 }
+
+.guestbook-form input,
+.guestbook-form textarea {
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 1em;
+}
+
+.guestbook-form button {
+	background: #007bff;
+	color: #fff;
+	border: none;
+	padding: 10px;
+	border-radius: 4px;
+	font-size: 1em;
+	cursor: pointer;
+}
+.guestbook-form button:hover {
+	background: #0056b3;
+}
