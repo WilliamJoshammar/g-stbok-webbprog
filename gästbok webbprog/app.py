@@ -30,3 +30,10 @@ def add_entry():
         "comment": request.form.get("comment", ""),
         "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     }
+
+    entries.append(entry)
+    save_entries(entries)
+    return render_template("popup.html")
+
+if __name__ == "__main__":
+    app.run(debug=True)
