@@ -1,0 +1,31 @@
+body {
+	font-family: Arial, sans-serif;
+	background: #1935a7;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	max-width: 600px;
+	margin: 40px auto;
+	background: #fff;
+	padding: 30px 40px;
+	border-radius: 8px;
+}
+
+h1, h2 {
+	text-align: center;
+	color: #333;
+}
+
+.guestbook-form {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin-bottom: 30px;
+}
+
+.guestbook-form label {
+	font-weight: bold;
+	color: #444;
+}
