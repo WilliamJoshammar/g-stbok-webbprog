@@ -15,3 +15,8 @@ def load_entries():
 def save_entries(entries):
     with open(GUESTBOOK_FILE, "w", encoding="utf-8") as f:
         json.dump(entries, f, ensure_ascii=False, indent=2)
+
+@app.route("/")
+def index():
+    entries = load_entries()
+    return render_template("base.html", entries=entries)
