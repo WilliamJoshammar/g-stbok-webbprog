@@ -20,3 +20,13 @@ def save_entries(entries):
 def index():
     entries = load_entries()
     return render_template("base.html", entries=entries)
+
+@app.route("/add", methods=["POST"])
+def add_entry():
+    entries = load_entries()
+    entry = {
+        "name": request.form.get("name", "Anonym"),
+        "email": request.form.get("email", ""),
+        "comment": request.form.get("comment", ""),
+        "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    }
